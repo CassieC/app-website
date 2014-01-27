@@ -14,7 +14,7 @@ html {
 	margin: 0;
 }
 
-.btn{
+.btn, .next, .prev{
 	padding: 0.7em 0.9em;
 	display: inline-block;
 	background-color:#721e4d;
@@ -28,6 +28,14 @@ html {
 }
 
 .btn:hover{
+	background-color:#F60;
+}
+
+.next:hover{
+	background-color:#F60;
+}
+
+.prev:hover{
 	background-color:#F60;
 }
 
@@ -62,6 +70,56 @@ html {
 
 .carousel [data-state="incoming"]{
 	z-index: 101;
+}
+
+dialog{
+	border-radius: 6px;
+	border: 1px solid #333;
+	box-shadow: 1px 1px 10px rgba(0,0,0,5);
+	padding: 1em;
+}
+
+dialog::backdrop{
+	background-color: rgba(0,255,0,0.5);
+}
+
+dialog + .backdrop{
+	background-color: rgba(35,23,90,0.5);
+}
+
+.btn-open{
+	padding: 0.7em 0.9em;
+	display: inline-block;
+	background-color:#721e4d;
+	background-image: linear-gradient(to bottom, #33c #336);
+	border-radius: 8px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+	color: #fff;
+	text-decoration: none;
+	position: left;
+}
+
+
+.btn-open:hover{
+	background-color:#F60;
+}
+
+.btn-close{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	border:2px solid #fff;
+	background-color: #000;
+	color: #fff;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+	font-weight: bold;
+	line-height: 0.6;
+	font-size: 1rem;
+	cursor: pointer;
+	position: absolute;
+	top: -16px;
+	right: -16px;
 }
 	
 

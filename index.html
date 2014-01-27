@@ -1,8 +1,8 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Cooking App</title>
+<link href="css/dialog-polyfill.css" rel="stylesheet">
 <link href="css/general.css" rel="stylesheet">
 <meta name="handheldfriendly" content="true">
 <meta name="mobileoptimized" content="240">
@@ -13,7 +13,13 @@
 	<img src="img/logo.png" class="logo">
 	<h1>Sizzling Sammy</h1>
 	<p>Sizzling Sammy, an App used to help to through simple, easy and delicious recipes.<br>Enjoy making your favourite recipes and browsing through helpful tips that will make life in the kitchen that much easier.</p>
-	<img src="http://placehold.it/250x200">
+	
+	<a class="btn-open" href="#">Preview App!</a>
+	
+	<dialog>
+		<div class="video"></div>
+			<button class="btn-close">x</button>
+	</dialog>
 
 	<button class="btn">Buy Now</button>
 	</div>
@@ -34,6 +40,7 @@
 
 	
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="js/dialog-polyfill.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
