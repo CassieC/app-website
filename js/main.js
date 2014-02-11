@@ -1,4 +1,5 @@
 var $items= $('.items img');
+var $board = $('.board');
 
 var switchItem = function (current, incoming) {
 	$items.eq(incoming).attr('data-state', 'incoming').fadeIn(250, function (){
@@ -57,3 +58,33 @@ $('.btn-close').on('click', function () {
 	$videoDialog.children('.video').html('');
 });
 
+$('.board-section').waypoint(function () {
+	$board.addClass('js-board-animate');
+},{ offset: '60%' });
+
+var $placeholder = $('.placeholder');
+
+$('.btn-load').on('click', function () {
+	$placeholder.load('loaded-in.html')
+});
+
+
+var $random = $('.random');
+var num = Math.round(Math.random() * 2);
+var file = 'dino-' + num + '.html';
+
+$random.load(file);
+
+var $dinoData = $.ajax('dinos.json',{
+	dataType: 'json'
+});
+
+$dinoData.done(function (data){
+	//Triggered when the dino data has finished downloading
+	//and is ready to be used
+	//Calculate the random number based on how many items are in the JSON file
+var rand = Math.round(Math.random() * (data.length - 1) );
+
+$('.dino-name').html( data[rand].name);
+
+});

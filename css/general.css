@@ -2,8 +2,8 @@
 @viewport { width: device-width; scale: 1; }
 
 html {
-	background-color: #EEE;
-	font: normal 100%/1.4 Georgia, "Times New Roman", Times, serif;
+	background-color: #FC9;
+	font: normal 100%/1.4 sans-serif;
 	background-position: top center;
 	margin: 0;
 }
@@ -14,7 +14,11 @@ html {
 	margin: 0;
 }
 
-.btn, .next, .prev{
+h1{
+	color: #721e4d;
+}
+
+.btn, .next, .prev, .btn-load{
 	padding: 0.7em 0.9em;
 	display: inline-block;
 	background-color:#721e4d;
@@ -27,8 +31,24 @@ html {
 	position: left;
 }
 
+.prev{
+	top: 50%;
+	position: absolute;
+	right: -5em;
+}
+
+.next{
+	top: 50%;
+	position: absolute;
+	left: -5em;
+}
+
 .btn:hover{
 	background-color:#F60;
+}
+
+.btn2{
+	display: none;
 }
 
 .next:hover{
@@ -45,23 +65,29 @@ html {
 	position: left;
 }
 
+.carousel-wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
 .carousel{
 	position: relative;
-	padding-button: 52.6%;
+	padding-bottom: 190%;
 }
 
 .carousel img {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 50%;
-	padding: 5em;
+	width: 100%;
+	height: 100%;
 }
 
 .carousel-buttons {
 	position:absolute;
 	z-index: 1000;
-	padding: 6em;
+	height: 100%;
+	width: 100%;
 }
 
 .carousel [data-state="current"] {
@@ -121,7 +147,38 @@ dialog + .backdrop{
 	top: -16px;
 	right: -16px;
 }
+
+
+.board-section{
+	background-color: ;
+}
+
+.board{
+	width: 240px;
 	
+}
+
+.js-board-animate{
+-webkit-animation: dipper-fade 1s linear 1 forwards;
+}
+
+.placeholder{
+	background-color:#F93;
+}
+
+@-webkit-keyframes dipper-fade{
+	
+	0%{
+		opacity:0;
+	}
+	100%{ 
+		opacity: 1;	
+}
+}
+	
+footer {
+	margin-top: 120%;
+}
 
 
 @media only screen and (min-width: 25em) {
@@ -130,6 +187,14 @@ dialog + .backdrop{
 	position: left;
 	font: Verdana, Geneva, sans-serif;
 	font-size: 1.2em;
+	}
+	
+	btn{
+		display: none;
+	}
+	
+	btn2{ 
+		display: block;
 	}
 	
 

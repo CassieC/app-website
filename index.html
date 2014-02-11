@@ -22,26 +22,54 @@
 	</dialog>
 
 	<button class="btn">Buy Now</button>
+	<button class="btn2">Buy Now</button>
 	</div>
 	
-	<div class="carousel">
-	<div class="items">
-	<img data-state="current" src="img/choose-meal.png"alt="">
-	<img src="img/ingredients.png"alt="">
-	<img src="img/cooking-steps.png"alt="">
-	<img src="img/favourites.png"alt="">
-	<img src="img/notifications.png"alt="">
+	<div class="carousel-wrapper">
+		<div class="carousel">
+			<div class="items">
+				<img data-state="current" src="img/choose-meal.png"alt="">
+				<img src="img/ingredients.png"alt="">
+				<img src="img/cooking-steps.png"alt="">
+				<img src="img/favourites.png"alt="">
+				<img src="img/notifications.png"alt="">
+			</div>
+			<div class="carousel-buttons">
+				<button class="next">Next</button>
+				<button class="prev">Previous</button>
+			</div>
+		</div>
 	</div>
-	<div class="carousel-buttons">
-		<button class="next">Next</button>
-		<button class="prev">Previous</button>
+
+	<section class="board-section">
+		<img class="board" src="img/cutting-board.svg" alt="">
+	</section>
+	
+		<button class="btn-load">Get Content</button>
+	<div class="placeholder"></div>
+	
+	<div class="random"></div>
+	
+	<div class="dino">
+		<h2 class="dino-name"></h2>
+		<dl>
+			<dt>Person</dt>
+			<dd class="dino-period"></dd>
+			<dt>Date</dt>
+			<dd class="dino-diet"></dd>
+		</dl>
 	</div>
-</div>
+
+<footer>&#169 Cassandra Chartrand, Sizzling Sammy&trade; All Rights Reserved. 2014</footer>
 
 	
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<script src="js/dialog-polyfill.js"></script>
+	<script src="js/waypoints.min.js"></script>
 	<script src="js/main.js"></script>
+	
+	
+
 </body>
 </html>
 
